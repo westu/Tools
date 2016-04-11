@@ -36,6 +36,7 @@ def main():
             if (i / 4 * 4) <= x <= (i / 4 * 4+ 3):
                 hit_num = hit_num + 1
         recall_list.append(hit_num)
+        # you can use recall_list instead of a number (hit_num_sum) to do more analysis
         if len(sys.argv) > 3:
             if sys.argv[3] == 'true' and hit_num == 1:
             # the Euclidean distance between query image and itself in dataset is 0
