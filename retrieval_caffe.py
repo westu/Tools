@@ -41,7 +41,6 @@ def main():
 
 def retrieval(node_list):
     recall_list = []
-    threads_num = int(sys.argv[6]) if len(sys.argv[6]) > 5 else 1
     for i in xrange(0, len(node_list)):
         retrieval_list = []
         for j in xrange(0, len(node_list)):
