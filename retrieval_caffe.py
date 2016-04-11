@@ -36,10 +36,12 @@ def main():
             record_list.append(node.Record(j, float(v)))
             line_no = line_no + 1
         node_list.append(node.Node(record_list))
+    del lines
     retrieval(node_list)
 
 def retrieval(node_list):
     recall_list = []
+    threads_num = int(sys.argv[6]) if len(sys.argv[6]) > 5 else 1
     for i in xrange(0, len(node_list)):
         retrieval_list = []
         for j in xrange(0, len(node_list)):
@@ -62,4 +64,5 @@ def cal_recall(i, retrieval_list, recall_list):
             hit_num = hit_num + 1
     recall_list.append(hit_num)
 
-main()
+if "__name__" == "__main__":
+    main()
