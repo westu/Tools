@@ -36,7 +36,7 @@ def main():
         lines = f.readlines()
         f.close()
         cha_list = get_cha_list(lines[i])  # characteristic list
-        assert(len(cha_list) == 4096)  # for testing
+        # assert(len(cha_list) == 4096)  # for testing
         this_node = node.Node(cha_list)
         dis_list = []
         total_image_num = 10200 if len(sys.argv) < 6 else int(sys.argv[5])
